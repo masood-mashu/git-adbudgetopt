@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "roas_efficiency_calculator",
+  "description": "Calculates Return on Ad Spend (ROAS) and verifies performance against minimum hurdle",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "ad_spend_json": {
+        "type": "string",
+        "description": "JSON string containing attributed_revenue and total_ad_spend in USD"
+      }
+    },
+    "required": [
+      "ad_spend_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

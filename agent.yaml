@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-adbudgetopt
+version: 1.0.0
+description: "Autonomous Multi-Channel Return on Ad Spend (ROAS) & Budget Allocation Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - ad-spend-roas-auditing
+  - cac-payback-modeling
+
+tools:
+  - roas-efficiency-calculator
+  - cac-payback-evaluator
+  - budget-reallocation-optimizer
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - marketing-sales
+  - ad-spend
+  - roas
+  - growth-marketing
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-adbudgetopt-01"
+  passport_category: "Marketing & sales"

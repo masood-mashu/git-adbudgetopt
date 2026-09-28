@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "cac_payback_evaluator",
+  "description": "Calculates CAC payback period in months based on customer acquisition cost and monthly gross profit",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "cac_data_json": {
+        "type": "string",
+        "description": "JSON string containing customer_acquisition_cost and monthly_gross_profit"
+      }
+    },
+    "required": [
+      "cac_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

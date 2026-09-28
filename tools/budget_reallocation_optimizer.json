@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "budget_reallocation_optimizer",
+  "description": "Audits proposed percentage shift in daily advertising budget between channels",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "shift_data_json": {
+        "type": "string",
+        "description": "JSON string containing current_daily_budget and proposed_daily_budget"
+      }
+    },
+    "required": [
+      "shift_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
